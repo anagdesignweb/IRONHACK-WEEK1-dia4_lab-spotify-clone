@@ -6,3 +6,102 @@ Green: #00B172
 White: #FFF
 
 */
+
+:root{
+      --colorText: #1A1A1A;
+      --green: #00B172;
+      --white: #FFF;
+}
+
+*, html{
+      padding: 0;
+      margin: 0;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+      font-weight: 100;
+      color: var(--colorText);
+}
+
+body{
+      padding: 80px;
+}
+.nav{
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      padding: 15px;
+position: fixed;
+}
+.nav > .navLogo{
+      display: flex;
+      text-align: center;
+      align-items: center;
+
+}
+.navLogo > img{
+      width: 230px;
+}
+.divNav{
+      display: flex;
+      text-align: center;
+      align-items: center;
+
+
+}
+.divNav > a{
+      text-decoration: none;
+      color: black;
+      padding-left: 20px;
+}
+.headerDiv{
+      height: 800px;
+      background-image: url(../images/landing.jpg);
+      background-position: center;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+}
+.headerDiv > h1 {
+      color: white;
+      font-size: 3.5rem;
+
+}
+.headerDiv > p {
+      color: white; 
+      font-size: 1.6rem;
+      padding: 5% 16%;
+}
+.main-1{
+      display: flex;
+
+}
+.main-1 > h3{
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2.2rem;
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: var(--green);
+      border: 2px solid var(--green);
+
+}
+.divCard > img {
+      width: 130px;
+}
+.main > div{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+}
+.divCard{
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+}
