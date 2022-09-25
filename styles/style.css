@@ -21,16 +21,27 @@ White: #FFF
       font-weight: 100;
       color: var(--colorText);
 }
-
-body{
-      padding: 80px;
+h3{
+      font-size: 2rem;
+      font-weight: 500;
 }
+h5{
+      margin: 30px 0;
+      font-weight: 700;
+      font-size: 1.3rem;
+}
+
+/*  -- header --  */
+
 .nav{
+      box-sizing: border-box;
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      height: 80px;
-      padding: 15px;
-position: fixed;
+      padding: 15px 25px;
+      position: fixed;
+      top: 0;
+      background-color: white;
 }
 .nav > .navLogo{
       display: flex;
@@ -38,15 +49,16 @@ position: fixed;
       align-items: center;
 
 }
-.navLogo > img{
-      width: 230px;
+.navLogo > .logo-with-text{
+      display: none;
+}
+.navLogo > .logo-without{
+      width: 53px;
 }
 .divNav{
       display: flex;
       text-align: center;
       align-items: center;
-
-
 }
 .divNav > a{
       text-decoration: none;
@@ -63,10 +75,11 @@ position: fixed;
       text-align: center;
       align-items: center;
       justify-content: center;
+      margin-top: 85px;
 }
 .headerDiv > h1 {
       color: white;
-      font-size: 3.5rem;
+      font-size: 4.6rem;
 
 }
 .headerDiv > p {
@@ -74,34 +87,139 @@ position: fixed;
       font-size: 1.6rem;
       padding: 5% 16%;
 }
-.main-1{
-      display: flex;
 
-}
-.main-1 > h3{
-      text-align: center;
-      padding: 30px 0;
-      font-size: 2.2rem;
-      font-weight: 500;
-      text-decoration: underline;
-      text-decoration-color: var(--green);
-      border: 2px solid var(--green);
+/*  -- Main --  */
 
-}
-.divCard > img {
-      width: 130px;
-}
-.main > div{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-      grid-auto-rows: minmax(100px, auto);
-}
-.divCard{
-      padding: 20px;
+.main{
+      margin:0 30px;
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
       justify-content: center;
+
 }
+.main-1{
+
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+}
+.main-1 > h3{
+      text-align: center;
+      padding: 5px;
+      font-weight: 500;
+      border-bottom: 4px solid var(--green);
+}
+
+.main-2{
+
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      justify-content: center;
+      padding: 25px 0;
+}
+.divCard{
+
+      padding: 30px;
+      margin: 30px 0;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: space-between;
+}
+.divCard > img {
+      width: 130px;
+}
+.divCard > h5{
+      color: var(--green);
+}
+.main-3{
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background-color: var(--green);
+
+}
+.main-3-textRigth > .main-3-h3{
+      display: flex;
+}
+.main-3-textRigth > div > h3{
+      color: var(--white);
+      margin-bottom: 80px;
+      margin-right: 10px;
+      padding-bottom: 5px;
+      text-align: left;
+      border-bottom:4px solid var(--white);
+}
+.main-3-textRigth > div > h5{
+      color: var(--white);
+      text-align: left;
+}
+.main-3-textRigth > div > p{
+      color: var(--white);
+      margin: 30px 0;
+      text-align: left;
+}
+
+
+.main-3-img{
+      margin-top: 80px;
+      max-width: 500px;
+      width: 450px;
+}
+
+/*
+
+MEDIA QUERIES
+
+*/
+
+/* a partir de 898px */
+
+@media only screen and (min-width: 898px) {
+
+      .navLogo > .logo-with-text{
+            display:block;
+            width: 180px;
+      }
+      .navLogo > .logo-without{
+            display: none;
+      }
+      .main-2{
+            box-sizing: border-box;
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            padding: 30px 0;
+            justify-content: space-around;
+      }
+      .main-3{
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+      }
+
+      .main-3-text{
+            width: 400px;
+      }
+      .main-3-img{
+            width: 350px;
+            margin-left: 30px;
+      }
+
+}
+
+
